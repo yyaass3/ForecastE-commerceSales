@@ -12,7 +12,7 @@ The Number of Trades for each country, The Total Trades for each Good of each co
 The output:
 for this part, i made the code limited to united kingdom as the country and country as the column name to be counted, also i limited the result to 10 sample.
 The output includes:
-1- First and Last 5 rows as sample, also data information and description
-2- Analyzing the sold good based on their country, quantity and price
+1. First and Last 5 rows as sample, also data information and description
+2. Analyzing the sold good based on their country, quantity and price
 
 wish the project be insightful to you.
