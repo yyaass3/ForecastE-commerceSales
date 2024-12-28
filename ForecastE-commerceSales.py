@@ -27,29 +27,29 @@ for i in null:
     if i == False:
         count += 1
 
-#Data['CustomerID'] = Data['CustomerID'].fillna(15287)
-#Data['Description'] = Data['Description'].fillna('Anything')
-#Data['quantity_without_outliers'] = Data['quantity_without_outliers'].bfill()
-#Data.to_csv("F:\DataAnalysis\ForecastE-commerceSales\online+retail\Online Retail.csv", index=False)
+Data['CustomerID'] = Data['CustomerID'].fillna(15287)
+Data['Description'] = Data['Description'].fillna('Anything')
+Data['quantity_without_outliers'] = Data['quantity_without_outliers'].bfill()
+Data.to_csv("F:\DataAnalysis\ForecastE-commerceSales\online+retail\Online Retail.csv", index=False)
 
 # Outlier Values
 box1 = sb.boxplot(Data)
-#plt.show()
+plt.show()
 scatter1 = sb.scatterplot(Data)
-#plt.show()
+plt.show()
 box2 = sb.boxplot(Data['Quantity'])
-#plt.show()
+plt.show()
 scatter2 = sb.scatterplot(Data['Quantity'])
-#plt.show()
+plt.show()
 
-#Data['quantity_without_outliers'] = Data[Data['Quantity'] > Data['Quantity'].quantile(0.0001)]['Quantity']
-#Data['quantity_without_outliers'] = Data[Data['Quantity'] < Data['Quantity'].quantile(0.9999)]['quantity_without_outliers']
-#Data.to_csv("F:\DataAnalysis\ForecastE-commerceSales\online+retail\Online Retail.csv", index=False)
+Data['quantity_without_outliers'] = Data[Data['Quantity'] > Data['Quantity'].quantile(0.0001)]['Quantity']
+Data['quantity_without_outliers'] = Data[Data['Quantity'] < Data['Quantity'].quantile(0.9999)]['quantity_without_outliers']
+Data.to_csv("F:\DataAnalysis\ForecastE-commerceSales\online+retail\Online Retail.csv", index=False)
 
 box3 = sb.boxplot(Data['quantity_without_outliers'])
-#plt.show()
+plt.show()
 scatter3 = sb.scatterplot(Data['quantity_without_outliers'])
-#plt.show()
+plt.show()
 
 ## Statitics
 
@@ -166,17 +166,17 @@ country = CountGood('United Kingdom', 'Country')
 kd = sb.kdeplot(Data['quantity_without_outliers'], color='blue')
 plt.title('Probability distribution of quantity')
 plt.xlabel('Quantity')
-#plt.show()
+plt.show()
 
 line = sb.lineplot(Data['quantity_without_outliers'], color='red')
 plt.ylabel('Quantity')
 plt.title('Quantity Changes')
-#plt.show()
+plt.show()
 
 scatter = sb.scatterplot(Data['quantity_without_outliers'], color='orange')
 plt.ylabel('Quantity')
 plt.title('Quantity Scatter Plot')
-#plt.show()
+plt.show()
 
 
 ## Run To Text File
